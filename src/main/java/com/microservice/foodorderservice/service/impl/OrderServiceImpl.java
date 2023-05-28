@@ -25,6 +25,11 @@ public class OrderServiceImpl implements OrderService {
     private OrderDetailRepository orderDetailRepository;
     @Autowired
     private PaymentRepository paymentRepository;
+    /**
+     * This method use to make order for list of pizzas
+     * @param orderRequest
+     * @return CommonResponse
+     */
     @Override
     public CommonResponse makeOrder(OrderRequest orderRequest) {
         log.info("OrderServiceImpl.makeOrder method accessed !");

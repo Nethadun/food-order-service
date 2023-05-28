@@ -17,6 +17,12 @@ public class OrderController {
 
     @Autowired
     private OrderService orderService;
+
+    /**
+     * This method use to make order for list of pizzas
+     * @param orderRequest
+     * @return CommonResponse
+     */
     @PostMapping("/make")
     public CommonResponse makeOrder(@RequestBody OrderRequest orderRequest){
         log.info("OrderController.makeOrder method accessed!");
