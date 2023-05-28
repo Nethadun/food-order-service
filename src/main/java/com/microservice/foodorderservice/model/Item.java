@@ -9,6 +9,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.math.BigDecimal;
 import java.sql.Timestamp;
 @AllArgsConstructor
 @NoArgsConstructor
@@ -21,6 +22,8 @@ public class Item {
     private String name;
     @Column(name = "category_id")
     private Integer categoryId;
+    @Column(name = "unit_price")
+    private BigDecimal unitPrice;
     @Column(name = "is_active", columnDefinition = "int default 1")
     private Integer isActive;
     @Column(name = "created_at")
