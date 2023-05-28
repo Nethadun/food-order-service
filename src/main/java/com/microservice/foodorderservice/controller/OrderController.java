@@ -18,6 +18,6 @@ public class OrderController {
     private OrderService orderService;
     public CommonResponse makeOrder(@RequestBody OrderRequest orderRequest){
         log.info("OrderController.makeOrder method accessed!");
-        return or
+        return orderService.makeOrder(orderRequest);
     }
 }
